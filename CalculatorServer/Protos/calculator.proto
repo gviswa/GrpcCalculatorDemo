@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "CalculatorServer";
+
+service Calculator {
+  rpc Add (CalculatorRequest) returns (CalculatorResponse);
+}
+
+message CalculatorRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+message CalculatorResponse {
+  int32 result = 1;
+}
